@@ -1,0 +1,18 @@
+/* Assuming the container has the class .input-container */
+.input-container input[type="date"],
+.input-container input[type="time"] {
+  appearance: none;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-container input[type="date"]:focus,
+.input-container input[type="time"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
+  outline: none;
+}

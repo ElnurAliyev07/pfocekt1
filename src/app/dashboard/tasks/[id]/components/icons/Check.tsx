@@ -1,0 +1,9 @@
+import React from 'react';
+
+const Check = () => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16.6673 5L7.50065 14.1667L3.33398 10" stroke="#21A931" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export default Check;

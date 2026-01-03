@@ -1,0 +1,188 @@
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+:root {
+  --background: #FBFCFF;
+  --foreground: #171717;
+  --primary: #444BD3;
+  --primary-hover: #303597;
+  --primary-focus: #1e2d7c;
+  --primary-disabled: #8c90d9;
+  --secondary: #6366F1;
+  --t-black: #14171A; 
+  --t-gray: #64717C;
+  --b-gray: #B8BABD;
+  --custom-red: #FD134C;
+  --custom-gray: #E8EAED;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-focus: var(--primary-focus);
+  --color-primary-disabled: var(--primary-disabled);
+
+  --color-secondary: var(--secondary);
+
+  --color-t-black: var(--t-black);
+  --color-t-gray: var(--t-gray);
+
+  --color-border-gray: var(--b-gray);
+  --color-custom-red: var(--custom-red);
+  --color-custom-gray: var(--custom-gray);
+  
+}
+
+@layer utilities {
+  .animate-spin-fast {
+    animation: spin 0.5s linear infinite;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  } */
+}
+
+html{
+  color: var(--foreground);
+  background: var(--background);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--t-black);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+.font-inter {
+  font-family: var(--inter);
+}
+
+
+.custom-scrollbar {
+  --scrollbar-width: 10px; /* Varsayılan genişlik */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #E8EAED;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 48px;
+  border: 2px solid var(--primary);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
+.custom-scrollbar-sm {
+  --scrollbar-width: 5px; /* Varsayılan genişlik */
+}
+
+.custom-scrollbar-sm::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+.custom-scrollbar-sm::-webkit-scrollbar-track {
+  background: #E8EAED;
+  border-radius: 8px;
+}
+
+.custom-scrollbar-sm::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 48px;
+  border: 2px solid var(--primary);
+}
+
+.custom-scrollbar-sm::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
+.custom-scrollbar-x {
+  overflow-x: auto;
+}
+
+.custom-scrollbar-x::-webkit-scrollbar {
+  height: 6px; /* Daha ince yatay kaydırma çubuğu */
+}
+
+.custom-scrollbar-x::-webkit-scrollbar-track {
+  background: #E8EAED;
+  border-radius: 8px;
+}
+
+.custom-scrollbar-x::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 48px;
+  border: 1px solid var(--primary); /* Daha ince kenarlık */
+}
+
+.custom-scrollbar-x::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit tabanlı tarayıcılarda gizler */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer'da gizler */
+  scrollbar-width: none;    /* Firefox'ta gizler */
+}
+
+.custom-container {
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 1224px) {
+  .custom-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+

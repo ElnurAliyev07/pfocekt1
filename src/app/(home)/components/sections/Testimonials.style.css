@@ -1,0 +1,42 @@
+.swiper-wrapper {
+    margin-bottom: 60px;
+}
+
+.tesitonialSwipper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #C6C8E3;
+    /* Change this to your desired color */
+    opacity: 1;
+    /* Set the opacity to make sure the color is visible */
+}
+
+.tesitonialSwipper .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary);
+    /* Change the color for the active dot */
+}
+
+@media screen and (min-width: 1024px) {
+    .tesitonialSwipper .swiper-slide-next {
+        /* margin-top: -30px; */
+        transition: .3s all;
+    }
+    .tesitonialSwipper .swiper-slide-next div {
+        opacity: 1;
+        transition: .3s all;
+    }
+    .tesitonialSwipper .swiper{
+        padding-top: 64px;
+    }
+    .tesitonialSwipper .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .tesitonialSwipper .swiper-pagination-bullet-active {
+        width: 16px;
+        height: 16px;
+    }
+}

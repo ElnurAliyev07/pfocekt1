@@ -1,0 +1,12 @@
+.virtualOfficeSwipper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #898989; /* Change this to your desired color */
+    opacity: 1; /* Set the opacity to make sure the color is visible */
+}
+
+.virtualOfficeSwipper .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    background-color: #F5AB20; /* Change the color for the active dot */
+}

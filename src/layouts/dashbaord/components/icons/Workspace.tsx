@@ -1,0 +1,12 @@
+import React from 'react'
+
+const Workspace = ({ className, color }: { className?: string, color?: string }) => {
+    return (
+        <svg style={{ stroke: color ? `var(--${color})` : `auto` }} className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 5.5L5 7L7.5 4.5M3.5 11.5L5 13L7.5 10.5M3.5 17.5L5 19L7.5 16.5M11 6H20M11 12H20M11 18H20"  strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}
+
+
+export default Workspace
